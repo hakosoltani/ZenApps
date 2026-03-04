@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Zen Apps LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #18170f; --stone: #5c5747; --dust: #a39e91;
+      --parchment: #f5f3ee; --cream: #faf9f6;
+      --sage: #4a7c6f; --sage-light: #e8f0ee; --border: rgba(92,87,71,.14);
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,249,246,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5vw; height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-mark {
+      width: 34px; height: 34px; border-radius: 9px;
+      background: var(--sage); display: flex; align-items: center; justify-content: center;
+    }
+    .logo-mark svg { width: 18px; height: 18px; }
+    .logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); }
+    .logo-text span { color: var(--sage); }
+    .back-link {
+      font-size: .82rem; color: var(--stone); text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--ink); }
+    .back-link svg { width: 14px; height: 14px; }
+
+    .doc-container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 72px 5vw 96px;
+    }
+
+    .doc-header { margin-bottom: 56px; }
+    .doc-eyebrow {
+      font-size: .7rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--sage); font-weight: 500; margin-bottom: 16px;
+    }
+    .doc-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300; line-height: 1.2;
+    }
+    .doc-meta {
+      margin-top: 16px; display: flex; gap: 24px; flex-wrap: wrap;
+    }
+    .doc-meta span {
+      font-size: .8rem; color: var(--dust);
+      font-weight: 300;
+    }
+    .doc-meta strong { color: var(--stone); font-weight: 400; }
+
+    .doc-divider {
+      height: 1px; background: var(--border); margin: 40px 0;
+    }
+
+    .doc-intro {
+      padding: 24px 28px;
+      background: var(--sage-light);
+      border-radius: 12px;
+      border-left: 3px solid var(--sage);
+      font-size: .9rem;
+      color: var(--stone);
+      font-weight: 300;
+      line-height: 1.75;
+      margin-bottom: 48px;
+    }
+
+    .doc-section { margin-bottom: 44px; }
+
+    .doc-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--sage-light);
+      color: var(--sage);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .doc-section p {
+      font-size: .9rem;
+      color: var(--stone);
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .doc-section ul {
+      margin: 10px 0 12px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .doc-section ul li {
+      font-size: .9rem;
+      color: var(--stone);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .doc-section ul li::marker { color: var(--sage); }
+
+    .doc-contact-box {
+      margin-top: 48px;
+      padding: 28px 32px;
+      background: var(--parchment);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .doc-contact-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .doc-contact-box p {
+      font-size: .88rem;
+      color: var(--stone);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .doc-contact-box a { color: var(--sage); text-decoration: none; }
+    .doc-contact-box a:hover { text-decoration: underline; }
+
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.65);
+      border-top: 1px solid var(--border);
+    }
+    .footer-bottom {
+      padding: 22px 5vw;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .footer-copy { font-size: .78rem; color: rgba(255,255,255,.28); font-weight: 300; }
+    .footer-legal-links { display: flex; gap: 20px; }
+    .footer-legal-links a {
+      font-size: .78rem; color: rgba(255,255,255,.35);
+      text-decoration: none; transition: color .2s;
+    }
+    .footer-legal-links a:hover { color: rgba(255,255,255,.65); }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 18 18" fill="none">
+        <circle cx="9" cy="9" r="3" fill="white" opacity=".9"/>
+        <circle cx="9" cy="9" r="7" stroke="white" stroke-width="1.4" fill="none" opacity=".5"/>
+        <circle cx="9" cy="2.5" r="1" fill="white" opacity=".6"/>
+        <circle cx="9" cy="15.5" r="1" fill="white" opacity=".6"/>
+      </svg>
+    </div>
+    <span class="logo-text"><span>Zen</span> Apps</span>
+  </a>
+  <a href="index.html" class="back-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 5l-7 7 7 7"/>
+    </svg>
+    Back to Home
+  </a>
+</header>
+
+<div class="doc-container">
+  <div class="doc-header">
+    <p class="doc-eyebrow">Legal Document</p>
+    <h1>Privacy Policy</h1>
+    <div class="doc-meta">
+      <span><strong>Effective:</strong> January 1, 2024</span>
+      <span><strong>Company:</strong> Zen Apps LLC</span>
+      <span><strong>Website:</strong> thezenapps.com</span>
+    </div>
+  </div>
+
+  <div class="doc-intro">
+    Zen Apps LLC ("we," "our," or "us") respects your privacy. This policy describes what data our apps collect, how we use it, and your rights. We keep it short because our data practices are genuinely simple.
+  </div>
+
+  <div class="doc-divider"></div>
+
+  <div class="doc-section">
+    <h2><span class="section-num">1</span> Information We Collect</h2>
+    <p>Our apps are designed to work with minimal data. Depending on the specific app, we may collect:</p>
+    <ul>
+      <li><strong>Information you provide</strong> — such as preferences, settings, or content you enter directly into the app.</li>
+      <li><strong>Usage data</strong> — anonymous analytics (e.g., crash reports, feature usage) collected through Apple's built-in frameworks or third-party tools like Firebase or similar, used solely to improve app performance.</li>
+      <li><strong>Device information</strong> — iOS version, device model, and app version for diagnostic purposes.</li>
+      <li><strong>Contact information</strong> — if you email us for support, we retain your email address to respond to your inquiry.</li>
+    </ul>
+    <p>We do <strong>not</strong> collect names, payment details, precise location, or any sensitive personal data unless explicitly stated within a specific app's supplemental privacy notice.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2><span class="section-num">2</span> How We Use Your Information</h2>
+    <p>We use collected data solely to:</p>
+    <ul>
+      <li>Operate, maintain, and improve our applications</li>
+      <li>Diagnose and fix technical issues</li>
+      <li>Respond to support requests and user feedback</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+    <p>We do not sell, rent, or trade your personal information to third parties for marketing purposes.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2><span class="section-num">3</span> Data Sharing</h2>
+    <p>We may share data only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service providers</strong> — trusted third parties (e.g., crash reporting tools) who help us operate our apps, bound by confidentiality obligations.</li>
+      <li><strong>Apple</strong> — app distribution and payments are handled by Apple under their own privacy policy.</li>
+      <li><strong>Legal requirements</strong> — if required by law, court order, or to protect our rights.</li>
+    </ul>
+  </div>
+
+  <div class="doc-section">
+    <h2><span class="section-num">4</span> Data Retention</h2>
+    <p>We retain personal data only as long as necessary to fulfill the purposes described in this policy or as required by law. Anonymous analytics data may be retained indefinitely in aggregated form.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2><span class="section-num">5</span> Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Request correction or deletion of your data</li>
+      <li>Object to certain processing activities</li>
+      <li>Lodge a complaint with your local data protection authority</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <strong>support@thezenapps.com</strong>.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2><span class="section-num">6</span> Children's Privacy</h2>
+    <p>Our apps are not directed to children under 13. We do not knowingly collect personal information from children. If we learn we have inadvertently collected such information, we will promptly delete it.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2><span class="section-num">7</span> Security</h2>
+    <p>We implement reasonable technical measures to protect your data. However, no method of transmission or storage is 100% secure. You use our apps at your own risk.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2><span class="section-num">8</span> Third-Party Links & Services</h2>
+    <p>Our apps may link to third-party websites or integrate third-party SDKs (e.g., App Store, analytics providers). We are not responsible for the privacy practices of those parties. Please review their policies independently.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2><span class="section-num">9</span> Changes to This Policy</h2>
+    <p>We may update this policy from time to time. Material changes will be noted by updating the effective date above. Continued use of our apps after changes constitutes acceptance of the revised policy.</p>
+  </div>
+
+  <div class="doc-contact-box">
+    <h3>Questions about this policy?</h3>
+    <p>
+      Zen Apps LLC<br>
+      123 Main Street, Suite 100, City, State 00000, United States<br>
+      <a href="mailto:support@thezenapps.com">support@thezenapps.com</a><br>
+      +1 (000) 000-0000
+    </p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2024 Zen Apps LLC. All rights reserved.</span>
+    <div class="footer-legal-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
