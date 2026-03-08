@@ -6,16 +6,21 @@
   <title>Privacy Policy — Zen Apps LLC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --ink: #18170f; --stone: #5c5747; --dust: #a39e91;
-      --parchment: #f5f3ee; --cream: #faf9f6;
-      --sage: #4a7c6f; --sage-light: #e8f0ee; --border: rgba(92,87,71,.14);
+      --ink:        #0a0a0a;
+      --stone:      #4a4a4a;
+      --dust:       #8a8a8a;
+      --parchment:  #f2f2f2;
+      --cream:      #fafafa;
+      --sage:       #1a1a1a;
+      --sage-light: #e8e8e8;
+      --border:     rgba(0,0,0,.1);
     }
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--cream);
       color: var(--ink);
       font-size: 15px;
@@ -24,24 +29,25 @@
     }
     header {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(250,249,246,.88);
+      background: rgba(255,255,255,.92);
       backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--border);
       padding: 0 5vw; height: 68px;
       display: flex; align-items: center; justify-content: space-between;
     }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .logo-mark {
-      width: 34px; height: 34px; border-radius: 9px;
-      background: var(--sage); display: flex; align-items: center; justify-content: center;
+    .logo img {
+      height: 32px;
+      width: auto;
+      max-width: 140px;
+      display: block;
     }
-    .logo-mark svg { width: 18px; height: 18px; }
-    .logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); }
-    .logo-text span { color: var(--sage); }
     .back-link {
       font-size: .82rem; color: var(--stone); text-decoration: none;
       display: flex; align-items: center; gap: 6px;
       transition: color .2s;
+      font-weight: 400;
     }
     .back-link:hover { color: var(--ink); }
     .back-link svg { width: 14px; height: 14px; }
@@ -55,12 +61,13 @@
     .doc-header { margin-bottom: 56px; }
     .doc-eyebrow {
       font-size: .7rem; letter-spacing: .2em; text-transform: uppercase;
-      color: var(--sage); font-weight: 500; margin-bottom: 16px;
+      color: var(--dust); font-weight: 500; margin-bottom: 16px;
     }
     .doc-header h1 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Inter', sans-serif;
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 300; line-height: 1.2;
+      color: var(--ink);
     }
     .doc-meta {
       margin-top: 16px; display: flex; gap: 24px; flex-wrap: wrap;
@@ -79,7 +86,7 @@
       padding: 24px 28px;
       background: var(--sage-light);
       border-radius: 12px;
-      border-left: 3px solid var(--sage);
+      border-left: 3px solid var(--stone);
       font-size: .9rem;
       color: var(--stone);
       font-weight: 300;
@@ -90,8 +97,8 @@
     .doc-section { margin-bottom: 44px; }
 
     .doc-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
       font-weight: 600;
       color: var(--ink);
       margin-bottom: 14px;
@@ -107,8 +114,8 @@
       width: 26px; height: 26px;
       border-radius: 50%;
       background: var(--sage-light);
-      color: var(--sage);
-      font-family: 'DM Sans', sans-serif;
+      color: var(--stone);
+      font-family: 'Inter', sans-serif;
       font-size: .72rem;
       font-weight: 500;
       flex-shrink: 0;
@@ -136,7 +143,7 @@
       line-height: 1.7;
     }
 
-    .doc-section ul li::marker { color: var(--sage); }
+    .doc-section ul li::marker { color: var(--dust); }
 
     .doc-contact-box {
       margin-top: 48px;
@@ -147,10 +154,11 @@
     }
 
     .doc-contact-box h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 400;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
       margin-bottom: 12px;
+      color: var(--ink);
     }
 
     .doc-contact-box p {
@@ -160,8 +168,8 @@
       line-height: 1.7;
     }
 
-    .doc-contact-box a { color: var(--sage); text-decoration: none; }
-    .doc-contact-box a:hover { text-decoration: underline; }
+    .doc-contact-box a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    .doc-contact-box a:hover { color: var(--stone); }
 
     footer {
       background: var(--ink);
@@ -180,21 +188,19 @@
       text-decoration: none; transition: color .2s;
     }
     .footer-legal-links a:hover { color: rgba(255,255,255,.65); }
+
+    @media (max-width: 600px) {
+      .logo img { height: 26px; max-width: 110px; }
+      .doc-container { padding: 48px 5vw 72px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <a href="index.html" class="logo">
-    <div class="logo-mark">
-      <svg viewBox="0 0 18 18" fill="none">
-        <circle cx="9" cy="9" r="3" fill="white" opacity=".9"/>
-        <circle cx="9" cy="9" r="7" stroke="white" stroke-width="1.4" fill="none" opacity=".5"/>
-        <circle cx="9" cy="2.5" r="1" fill="white" opacity=".6"/>
-        <circle cx="9" cy="15.5" r="1" fill="white" opacity=".6"/>
-      </svg>
-    </div>
-    <span class="logo-text"><span>Zen</span> Apps</span>
+    <img src="logo.svg" alt="Zen Apps Logo">
   </a>
   <a href="index.html" class="back-link">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
