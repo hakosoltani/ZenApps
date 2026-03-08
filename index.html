@@ -702,9 +702,17 @@
 
     <!-- Brand + Feedback -->
     <div class="footer-brand">
-  <a href="/" class="logo">
-    <img src="logo.svg" alt="Zen Apps Logo" style="height: 32px; width: auto; max-width: 140px; display: block;">
-  </a>
+      <a href="/" class="logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="9" r="3" fill="white" opacity=".9"/>
+            <circle cx="9" cy="9" r="7" stroke="white" stroke-width="1.4" fill="none" opacity=".5"/>
+            <circle cx="9" cy="2.5" r="1" fill="white" opacity=".6"/>
+            <circle cx="9" cy="15.5" r="1" fill="white" opacity=".6"/>
+          </svg>
+        </div>
+        <span class="logo-text"><span>Zen</span> Apps</span>
+      </a>
       <p class="footer-tagline">iOS apps and software services, built to last.</p>
       <div class="footer-feedback">
         <a href="/cdn-cgi/l/email-protection#cebdbbbebea1bcba8ebaa6abb4aba0afbebebde0ada1a3f1bdbbaca4abadbaf388ababaaacafada5" class="btn-feedback" onclick="openModal(event)">
@@ -787,10 +795,18 @@
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── Scroll animations ──
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-up').forEach(el => {
+    // If already in viewport on load, show immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    } else {
+      observer.observe(el);
+    }
+  });
 
   // ── Modal ──
   function openModal(e) {
