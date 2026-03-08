@@ -602,12 +602,17 @@
     }
 
     .fade-up {
-      opacity: 0;
-      transform: translateY(18px);
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity .6s ease, transform .6s ease;
     }
 
-    .fade-up.visible {
+    .fade-up.animate {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .fade-up.animate.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -702,17 +707,9 @@
 
     <!-- Brand + Feedback -->
     <div class="footer-brand">
-      <a href="/" class="logo">
-        <div class="logo-mark">
-          <svg viewBox="0 0 18 18" fill="none">
-            <circle cx="9" cy="9" r="3" fill="white" opacity=".9"/>
-            <circle cx="9" cy="9" r="7" stroke="white" stroke-width="1.4" fill="none" opacity=".5"/>
-            <circle cx="9" cy="2.5" r="1" fill="white" opacity=".6"/>
-            <circle cx="9" cy="15.5" r="1" fill="white" opacity=".6"/>
-          </svg>
-        </div>
-        <span class="logo-text"><span>Zen</span> Apps</span>
-      </a>
+  <a href="/" class="logo">
+    <img src="logo2.svg" alt="Zen Apps Logo" style="height: 32px; width: auto; max-width: 140px; display: block;">
+  </a>
       <p class="footer-tagline">iOS apps and software services, built to last.</p>
       <div class="footer-feedback">
         <a href="/cdn-cgi/l/email-protection#cebdbbbebea1bcba8ebaa6abb4aba0afbebebde0ada1a3f1bdbbaca4abadbaf388ababaaacafada5" class="btn-feedback" onclick="openModal(event)">
@@ -799,11 +796,10 @@
   }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade-up').forEach(el => {
-    // If already in viewport on load, show immediately
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      el.classList.add('visible');
-    } else {
+    if (rect.top >= window.innerHeight) {
+      // Only animate elements that start fully off-screen
+      el.classList.add('animate');
       observer.observe(el);
     }
   });
